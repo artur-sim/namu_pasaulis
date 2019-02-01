@@ -24,8 +24,8 @@
 
     .container {
         display: inline-block;
-        width: 1000px;
-        margin: 0 calc((100% - 1000px)/2);
+        width: 800px;
+        margin: 0 calc((100% - 800px)/2);
         background-color: #fff;
     }
 
@@ -33,13 +33,11 @@
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin-top: 20px;
+        margin: 10px 0;
     }
 
     .first-block>img {
-
         width: 70px;
-
     }
 
     .second-block {
@@ -51,23 +49,23 @@
 
     .second-block>.part-one {
         display: inline-block;
-        width: 30%;
+        width: 50%;
         float: left;
     }
 
     .second-block>.part-one>img {
-        width: 300px;
+        width: 100%;
     }
 
     .second-block>.line {
         display: inline-block;
-        width: calc(100% -20px);
+        width: calc(100% - 20px);
         border-bottom: 1px solid #000;
     }
 
     .second-block>.part-two {
         display: inline-block;
-        width: 70%;
+        width: 50%;
         float: left;
         padding: 10px 0;
         text-align: center;
@@ -83,43 +81,37 @@
         margin: 0;
     }
 
-    .second-block>.part-two>p>.longLine {
-        display: inline-block;
-        width: 12px;
-        height: 6px;
-        border-top: #fff 2px solid;
-    }
+
 
     .second-block>.part-two>.line {
         display: inline-block;
-        width: calc(100% - 30px);
+        width: 60%;
         height: 2px;
         background: #fff;
-
     }
 
 
     .second-block>.part-two>.zaLogo {
         display: inline-block;
         width: 100%;
-        text-align: right
+        text-align: center;
     }
 
     .second-block>.part-two>.zaLogo>img {
-        width: 250px;
+        width: 200px;
         margin-right: 10px;
     }
 
     .second-block>.part-two>.zaLogo>p {
-        font-size: 15px;
+        font-size: 25px;
         margin: 0;
         margin-right: 10px;
     }
 
     .container-for-third-block {
         display: inline-block;
-        width: 900px;
-        margin: 20px calc((100% - 900px) / 2)
+        width: 700px;
+        margin: 20px calc((100% - 700px) / 2)
     }
 
     .third-block {
@@ -130,22 +122,27 @@
 
     .third-block>.part-one {
         display: inline-block;
-        width: 40%;
+        width: 50%;
         float: left;
     }
 
     .third-block>.part-one>img {
-        width: 90%;
+        width: 100%;
     }
 
     .third-block>.part-two {
         display: inline-block;
-        width: 60%;
+        width: 50%;
         float: left;
+
+    }
+
+    .third-block>.part-two>.text {
+        padding: 20px;
     }
 
     .third-block>.part-two>.text>h1 {
-        font-size: 30px
+        font-size: 20px
     }
 
     .third-block>.part-two>.text {
@@ -162,6 +159,17 @@
         display: inline-block;
         width: 50%;
         float: left;
+
+    }
+
+    .third-block-a>.part-one>ul {
+        padding-right: 20px;
+    }
+
+    .third-block-a>.part-one>ul>p {
+        margin: 10px 0;
+        font-size: 20px;
+        font-weight: bold
     }
 
     .third-block-a>.part-two {
@@ -171,7 +179,7 @@
     }
 
     .third-block-a>.part-two>img {
-        width: 90%;
+        width: 100%;
         float: right;
     }
 
@@ -187,7 +195,7 @@
     }
 
     .third-block-b>.part-one>img {
-        width: 90%;
+        width: 100%;
     }
 
     .third-block-b>.part-two {
@@ -197,8 +205,13 @@
 
     }
 
-    .third-block-b>.part-two>h1 {
-        font-size: 30px;
+    .third-block-b>.part-two>.text {
+        padding: 20px;
+
+    }
+
+    .third-block-b>.part-two>.text>h1 {
+        font-size: 20px;
     }
 
     .fourth-block {
@@ -224,12 +237,8 @@
     .fourth-block>.part-one>img {}
 
     .fourth-block>.part-one>.out-block>h1 {
-
         display: inline-block;
         font-size: 20px;
-
-
-
     }
 
     .fourth-block>.part-one>.out-block>h1>a {
@@ -272,14 +281,32 @@
 
     footer>.container {
         display: inline-block;
-        width: 900px;
-        margin: 20px calc((100% - 900px) / 2);
+        width: 700px;
+        margin: 20px calc((100% - 700px) / 2);
         background: #F39200;
     }
 
     footer>.container {
         display: inline-block;
         float: left;
+    }
+
+    .longLine {
+        display: inline-block;
+        width: 12px;
+        height: 6px;
+        border-top: #fff 2px solid;
+    }
+
+    .longLine-black {
+        display: inline-block;
+        width: 12px;
+        height: 6px;
+        border-top: #000 2px solid;
+    }
+
+    .small-text {
+        font-size: 15px !important;
     }
 </style>
 
@@ -290,15 +317,16 @@
         </div>
         <div class="second-block">
             <div class="part-one">
-                <img src="https://i.ibb.co/wKh3V8x/logo.png"> </div>
-
+                <img src="https://i.ibb.co/wKh3V8x/logo.png">
+            </div>
             <div class="part-two">
-                <p>STATYBA, INTERJERAS, BALDAI, NEKILNOJAMAS TURTAS</p>
-                <p>BALANDŽIO 11 <span class="longLine"></span> 14 D.</p>
+                <p>STATYBA, INTERJERAS, BALDAI,</p>
+                <p>NEKILNOJAMAS TURTAS</p>
                 <div class="line"></div>
                 <div class="zaLogo">
+                    <p>BALANDŽIO 11<span class="longLine"></span>14 D.</p>
                     <img src="https://zalgirioarena.lt/files/resurses/logo%20horiz%20baltas%20png.png?x44008">
-                    <p>Karaliaus Mindaugo pr. 50, Kaunas</p>
+                    <p class="small-text">Karaliaus Mindaugo pr. 50, Kaunas</p>
                 </div>
             </div>
 
@@ -306,18 +334,43 @@
         <div class="container-for-third-block">
             <div class="third-block">
                 <div class="part-one">
-                    <img src="https://i.ibb.co/HFJjvJ4/3.jpg">
+                    <img src="https://i.ibb.co/C9kNWKP/stendas.png" alt="stendas">
                 </div>
                 <div class="part-two">
                     <div class="text">
                         <h1>Renginys siekiantiems ilgalaikių ir efektyvių rezultatų, kasmet atidarantis statybų sezono
-                            pradžią.</h1>
+                            pradžią. &bdquo;Namų pasaulis 2019&rdquo; <span class="longLine-black"></span> vieta, kur
+                            susitinka verslas ir gimsta
+                            geriausios
+                            idėjos!</h1>
                     </div>
                 </div>
             </div>
             <div class="third-block-a">
                 <div class="part-one">
-                    <h1>"Namų pasaulis 2019" - vieta, kur susitinka verslas ir gimsta geriausios idėjos!</h1>
+                    <ul>
+                        <p>Parodoje:</p>
+                        <li>gausus pirkėjų srautas per kelias dienas;
+                        </li>
+                        <li>tiesioginis ryšys su klientais;
+                        </li>
+                        <li>patikimos įmonės įvaizdžio formavimas;
+                        </li>
+                        <li>statybų verslo naujienos;
+                        </li>
+                        <li>pardavimų skatinimas, rinkos aktyvinimas;
+                        </li>
+                        <li>bendradarbiavimo galimybės, kontaktai;
+                        </li>
+                        <li>efektyviausias būdas pristatyti naujausią produktą ar paslaugą;
+                        </li>
+                        <li>NT ekspozicija &bdquo;Būstas&rdquo;;
+                        </li>
+                        <li>baldų, interjero ekspozicija.
+                        </li>
+
+                    </ul>
+
                 </div>
                 <div class="part-two">
                     <img src="https://i.ibb.co/7n3GRVL/1.jpg">
@@ -328,10 +381,16 @@
                     <img src="https://i.ibb.co/dBg3Bj3/2.jpg">
                 </div>
                 <div class="part-two">
-                    <h1>NAMŲ PASAULIS - galimybė kiekvienam potencialiam pirkėjui skirti išskirtinį dėmesį ir
-                        bendravimą. Parodos metu suteikta
-                        informacija gali būti lemiamas veiksnys, padedantis lankytojui pasirinkti Jūsų prekę ar
-                        paslaugą.</h1>
+                    <div class="text">
+                        <h1>NAMŲ PASAULIS <span class="longLine-black"></span> galimybė kiekvienam potencialiam
+                            pirkėjui
+                            skirti
+                            išskirtinį dėmesį ir
+                            bendravimą. Parodos metu suteikta
+                            informacija gali būti lemiamas veiksnys, padedantis lankytojui pasirinkti Jūsų prekę ar
+                            paslaugą.</h1>
+                    </div>
+
                 </div>
             </div>
             <div class="fourth-block">
@@ -340,8 +399,6 @@
                         <h1> <img src="https://img.icons8.com/small/16/000000/forward.png"><a href="http://vvs.parodos.lt/registration/73">Registracija</a>
                         </h1>
                     </div>
-
-
                 </div>
                 <div class="part-two">
                     <div class="out-block">
@@ -359,13 +416,12 @@
                     <p>
                         UAB „Ekspozicijų centras“ |
                         Tel. +370 37 79 29 85 |
-                        El.p.: namupasaulis@expo.lt |
+                        El.p.: <a href="mailto:namupasaulis@expo.lt">namupasaulis@expo.lt </a> namupasaulis@expo.lt |
                         www.expo.lt | <a href="mailto:sutikimai@expo.lt" style="text-decoration:none;
                          ">Atsisakyti
                             naujienlaiškio</a>
                     </p>
                 </div>
-
             </div>
         </footer>
     </div>
