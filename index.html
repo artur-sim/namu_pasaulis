@@ -6,326 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<style type="text/css">
-    body,
-    body * {
-        margin: 0;
-        padding: 0;
-        vertical-align: top;
-        box-sizing: border-box;
-        font-family: Helvetica, Arial, sans-serif
-    }
-
+    <style type="text/css">
     body {
         background-color: #e6ebed
     }
-
-    .container {
-        display: inline-block;
-        width: 800px;
-        margin: 0 calc((100% - 800px)/2);
-        background-color: #fff;
-    }
-
-    .first-block {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .first-block>img {
-        width: 70px;
-    }
-
-    .second-block {
-        display: inline-block;
-        width: 100%;
-        background: #F39200;
-    }
-
-    .second-block>.part-one {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .second-block>.part-one>a>img {
-        width: 100%;
-    }
-
-    .second-block>.line {
-        display: inline-block;
-        width: calc(100% - 20px);
-        border-bottom: 1px solid #000;
-    }
-
-    .second-block>.part-two {
-        display: inline-block;
-        width: 50%;
-        float: left;
-        padding: 10px 0;
-        text-align: center;
-        color: #fff;
-    }
-
-    .second-block>.part-two>p {
-        display: inline-block;
-        width: 100%;
-        font-size: 25px;
-        font-weight: 500;
-        margin: 0;
-    }
-
-    .second-block>.part-two>.line {
-        display: inline-block;
-        width: 60%;
-        height: 2px;
-        background: #fff;
-    }
-
-    .second-block>.part-two>.zaLogo {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-    }
-
-    .second-block>.part-two>.zaLogo>img {
-        width: 200px;
-        margin-right: 10px;
-    }
-
-    .second-block>.part-two>.zaLogo>p {
-        font-size: 25px;
-        margin: 0;
-        margin-right: 10px;
-    }
-
-    .container-for-third-block {
-        display: inline-block;
-        width: 700px;
-        margin: 20px calc((100% - 700px) / 2)
-    }
-
-    .third-block {
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .third-block>.part-one {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .third-block>.part-one>img {
-        width: 100%;
-    }
-
-    .third-block>.part-two {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .third-block>.part-two>.text {
-        padding: 20px;
-    }
-
-    .third-block>.part-two>.text>h1 {
-        font-size: 20px
-    }
-
-    .third-block>.part-two>.text {
-        display: inline-block;
-    }
-
-    .third-block-a {
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .third-block-a>.part-one {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .third-block-a>.part-one>ul {
-        padding-right: 20px;
-    }
-
-    .third-block-a>.part-one>ul>p {
-        margin: 10px 0;
-        font-size: 20px;
-        font-weight: bold
-    }
-
-    .third-block-a>.part-two {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .third-block-a>.part-two>img {
-        width: 100%;
-        float: right;
-    }
-
-    .third-block-b {
-        display: inline-block;
-        width: 100%;
-    }
-
-    .third-block-b>.part-one {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .third-block-b>.part-one>img {
-        width: 100%;
-    }
-
-    .third-block-b>.part-two {
-        display: inline-block;
-        width: 50%;
-        float: left;
-    }
-
-    .third-block-b>.part-two>.text {
-        padding: 20px;
-    }
-
-    .third-block-b>.part-two>.text>h1 {
-        font-size: 20px;
-    }
-
-    .fourth-block {
-        display: inline-block;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .fourth-block>.part-one {
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .fourth-block>.part-one>.out-block {
-        display: inline-block;
-        width: 350px;
-        background-color: #F39200
-    }
-
-    .fourth-block>.part-one>img {}
-
-    .fourth-block>.part-one>.out-block>h1 {
-        display: inline-block;
-        font-size: 20px;
-    }
-
-    .fourth-block>.part-one>.out-block>h1>a {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .fourth-block>.part-two {
-        display: inline-block;
-        width: 100%;
-    }
-
-    .fourth-block>.part-two>.out-block {
-        display: inline-block;
-        width: 350px;
-        background-color: #F39200;
-    }
-
-    .fourth-block>.part-two>img {}
-
-    .fourth-block>.part-two>.out-block>h1 {
-        display: inline-block;
-        font-size: 20px;
-    }
-
-    .fourth-block>.part-two>.out-block>h1>a {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    footer {
-        display: inline-block;
-        width: 100%;
-        background: #F39200;
-    }
-
-    footer>.container {
-        display: inline-block;
-        width: 700px;
-        margin: 20px calc((100% - 700px) / 2);
-        background: #F39200;
-    }
-
-    footer>.container {
-        display: inline-block;
-        float: left;
-    }
-
-    .longLine {
-        display: inline-block;
-        width: 12px;
-        height: 6px;
-        border-top: #fff 2px solid;
-    }
-
-    .longLine-black {
-        display: inline-block;
-        width: 12px;
-        height: 6px;
-        border-top: #000 2px solid;
-    }
-
-    .small-text {
-        font-size: 15px !important;
-    }
 </style>
+</head> 
 
-<body>
-    <div class="container">
-        <div class="first-block">
-            <img src="http://www.parodos.lt/templates/expo.parodos/images/logo.png">
+
+<body style="margin: 0; padding: 0; vertical-align: top; box-sizing: border-box; font-family: Helvetica, Arial, sans-serif">
+    <div style="   display: inline-block;     width: 800px;    margin: 0 calc((100% - 800px)/2);
+    background-color: #fff;">
+        <div style="  display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;">
+            <img src="http://www.parodos.lt/templates/expo.parodos/images/logo.png" style="  width: 70px;">
         </div>
-        <div class="second-block">
-            <div class="part-one">
+        <div style="  display: inline-block;
+        width: 100%;
+        background: #F39200;">
+            <div style="       display: inline-block;
+            width: 50%;
+            float: left;">
                 <a href="http://www.parodos.lt/26673/parodu-grafikas/artimiausios-parodos.html?view=descr&paroda=111">
-                    <img src="https://i.ibb.co/wKh3V8x/logo.png"></a>
+                    <img src="https://i.ibb.co/wKh3V8x/logo.png" style="width: 100%;"></a>
             </div>
-            <div class="part-two">
-                <p>STATYBA, INTERJERAS, BALDAI,</p>
-                <p>NEKILNOJAMAS TURTAS</p>
-                <div class="line"></div>
-                <div class="zaLogo">
-                    <p>BALANDŽIO 11<span class="longLine"></span>14 D.</p>
-                    <img src="https://zalgirioarena.lt/files/resurses/logo%20horiz%20baltas%20png.png?x44008">
-                    <p class="small-text">Karaliaus Mindaugo pr. 50, Kaunas</p>
+            <div style=" display: inline-block;
+            width: 50%;
+            float: left;
+            padding: 10px 0;
+            text-align: center;
+            color: #fff;">
+                <p style="     display: inline-block;
+                width: 100%;
+                font-size: 25px;
+                font-weight: 500;
+                margin: 0;">STATYBA,
+                    INTERJERAS, BALDAI,</p>
+                <p style="     display: inline-block;
+                width: 100%;
+                font-size: 25px;
+                font-weight: 500;
+                margin: 0;">NEKILNOJAMAS
+                    TURTAS</p>
+                <div style="          display: inline-block;
+                width: 60%;
+                height: 2px;
+                background: #fff;"></div>
+                <div style="display: inline-block; width: 100%; font-size: 25px;  font-weight: 500;
+                margin: 0;">
+                    <p style="  display: inline-block; width: 100%; font-size: 25px;  font-weight: 500;
+                    margin: 0;">BALANDŽIO
+                        11<span class="longLine"></span>14 D.</p>
+                    <img src="https://zalgirioarena.lt/files/resurses/logo%20horiz%20baltas%20png.png?x44008" style="  display: inline-block;
+                    width: 50%;
+                    text-align: center;">
+                    <p style=" display: inline-block; width: 100%; font-size: 15px; float:left;  margin: 0">Karaliaus
+                        Mindaugo pr. 50, Kaunas</p>
                 </div>
             </div>
 
         </div>
-        <div class="container-for-third-block">
-            <div class="third-block">
-                <div class="part-one">
-                    <img src="https://i.ibb.co/C9kNWKP/stendas.png" alt="stendas">
+        <div style="  display: inline-block;  width: 700px;  margin: 20px calc((100% - 700px) / 2)">
+            <div style="     display: inline-block;    width: 100%;    margin-bottom: 20px;">
+                <div style="        display: inline-block; width: 50%; float: left;">
+                    <img src="https://i.ibb.co/C9kNWKP/stendas.png" alt="stendas" style="   width: 100%;">
                 </div>
-                <div class="part-two">
-                    <div class="text">
-                        <h1>PARODA siekiantiems ilgalaikių ir efektyvių rezultatų, kasmet atidaranti statybų sezono
+                <div style="      display: inline-block;
+                width: 50%;
+                float: left;">
+                    <div style="   display: inline-block;  padding: 20px;">
+                        <h1 style="       font-size: 20px"> PARODA siekiantiems ilgalaikių ir efektyvių rezultatų,
+                            kasmet atidaranti statybų sezono
                             pradžią. <span>
-                                <p>&bdquo;Namų pasaulis 2019&rdquo; <span class="longLine-black"></span> vieta, kur
+                                <p>&bdquo;Namų pasaulis 2019&rdquo; <span style="     display: inline-block;
+                                    width: 12px;
+                                    height: 6px;
+                                    border-top: #000 2px solid;"></span>
+                                    vieta, kur
                                     susitinka verslas ir gimsta
                                     geriausios
                                     idėjos!</p>
@@ -333,10 +92,10 @@
                     </div>
                 </div>
             </div>
-            <div class="third-block-a">
-                <div class="part-one">
-                    <ul>
-                        <p>Parodoje:</p>
+            <div style="     display: inline-block;    width: 100%;   margin-bottom: 30px;">
+                <div style="       display: inline-block; width: 50%; float: left;">
+                    <ul style=" padding-right: 20px;">
+                        <p style="      margin: 10px 0; font-size: 20px; font-weight: bold">Parodoje:</p>
                         <li>gausus pirkėjų srautas per kelias dienas;
                         </li>
                         <li>tiesioginis ryšys su klientais;
@@ -359,17 +118,25 @@
                     </ul>
 
                 </div>
-                <div class="part-two">
-                    <img src="https://i.ibb.co/7n3GRVL/1.jpg">
+                <div style="  display: inline-block;  width: 50%; float: left;">
+                    <img style="  width: 100%;
+                    float: right;" src="https://i.ibb.co/7n3GRVL/1.jpg">
                 </div>
             </div>
-            <div class="third-block-b">
-                <div class="part-one">
-                    <img src="https://i.ibb.co/dBg3Bj3/2.jpg">
+            <div style="     display: inline-block; width: 100%;">
+                <div style="  display: inline-block; width: 50%; float: left;">
+                    <img style="    width: 100%;" src="https://i.ibb.co/dBg3Bj3/2.jpg">
                 </div>
-                <div class="part-two">
-                    <div class="text">
-                        <h1>NAMŲ PASAULIS <span class="longLine-black"></span> galimybė kiekvienam potencialiam
+                <div style="     display: inline-block;
+                width: 50%;
+                float: left;">
+                    <div style="   padding: 20px;">
+                        <h1 style="  font-size: 20px;">NAMŲ PASAULIS <span style="     display: inline-block;
+                            width: 12px;
+                            height: 6px;
+                            border-top: #000 2px solid;"></span>
+                            galimybė
+                            kiekvienam potencialiam
                             pirkėjui
                             skirti
                             išskirtinį dėmesį ir
@@ -380,16 +147,32 @@
 
                 </div>
             </div>
-            <div class="fourth-block">
-                <div class="part-one">
-                    <div class="out-block">
-                        <h1> <img src="https://img.icons8.com/small/16/000000/forward.png"><a href="http://vvs.parodos.lt/registration/73">Registracija</a>
+            <div style="        display: inline-block;
+            width: 100%;
+            margin: 20px 0;">
+                <div style="      display: inline-block;
+                width: 100%;
+                margin-bottom: 20px;">
+                    <!-- outblock below -->
+                    <div style="      display: inline-block;
+                    width: 350px;
+                    background-color: #F39200">
+                        <h1 style="    display: inline-block;
+                        font-size: 20px;"> <img src="https://img.icons8.com/small/16/000000/forward.png"><a
+                                style="      text-decoration: none;
+                               color: #fff;" href="http://vvs.parodos.lt/registration/73">Registracija</a>
                         </h1>
                     </div>
                 </div>
-                <div class="part-two">
-                    <div class="out-block">
-                        <h1> <img src="https://img.icons8.com/small/16/000000/forward.png"><a href="http://www.parodos.lt/45973/parodu-grafikas/2019-m-parodos.html?view=descr&paroda=111">Daugiau
+                <div style="        display: inline-block;
+                width: 100%;">
+                    <div style="     display: inline-block;
+                    width: 350px;
+                    background-color: #F39200;">
+                        <h1 style="        display: inline-block;
+                        font-size: 20px;"> <img src="https://img.icons8.com/small/16/000000/forward.png"><a
+                                style="     text-decoration: none;
+                                color: #fff;" href="http://www.parodos.lt/45973/parodu-grafikas/2019-m-parodos.html?view=descr&paroda=111">Daugiau
                                 informacijos</a></h1>
                     </div>
 
@@ -397,8 +180,13 @@
             </div>
         </div>
 
-        <footer>
-            <div class="container">
+        <footer style="        display: inline-block;
+        width: 100%;
+        background: #F39200;">
+            <div style="        display: inline-block;
+            width: 700px;
+            margin: 20px calc((100% - 700px) / 2);
+            background: #F39200;">
                 <div class="company">
                     <p>
                         UAB „Ekspozicijų centras“ |
